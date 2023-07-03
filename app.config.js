@@ -1,10 +1,15 @@
+
+const IS_DEV = process.env.APP_VARIANT === 'development';
+
+
 export default {
-    name: 'SpaceCraft',
+    name: IS_DEV ? 'SpaceCraft (Dev)' : 'SpaceCraft',
     slug: 'SpaceCraft',
     ios: {
-      bundleIdentifier: 'com.spacecraft',
+      bundleIdentifier: IS_DEV ? 'com.spacecraft.dev' : 'com.spacecraft',
+
     },
     android: {
-      package: 'com.spacecraft',
+      package: IS_DEV ? 'com.spacecraft.dev' : 'com.spacecraft',
     },
   };
