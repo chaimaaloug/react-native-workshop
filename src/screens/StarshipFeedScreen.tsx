@@ -1,8 +1,9 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View, FlatList } from "react-native";
-import {Card } from 'react-native-paper';
-
+import {Appbar, Card } from 'react-native-paper';
 import { useStarships } from "../hooks/useStarships";
+import MainTitle from "../components/Title";
+import { Routes } from "../navigation/Routes";
 
 const renderItem = ({ item }) => {
   
@@ -11,18 +12,17 @@ const renderItem = ({ item }) => {
     <Card style={styles.card}>
       <Card.Content>
       <Text style={styles.title}>{item.name}</Text>
-      <Text style={styles.txt}>{item.model}</Text>
-      <Text style={styles.txt}>{item.cost_in_credits}</Text>
-      <Text style={styles.txt}>{item.crew}</Text>
-      <Text style={styles.txt}>{item.hyperdrive_rating}</Text>
-      <Text style={styles.txt}>{item.cost_in_credits}</Text>
+      <Text style={styles.txt}>Model : {item.model}</Text>
+      <Text style={styles.txt}>Cost : {item.cost_in_credits}</Text>
+      <Text style={styles.txt}>Crew : {item.crew}</Text>
+      <Text style={styles.txt}>Hyperdrive Rating : {item.hyperdrive_rating}</Text>
       </Card.Content>
     </Card>
   )
 
 };
 
-export const StarshipFeedScreen = () => {
+export const StarshipFeedScreen = (props) => {
   const {isLoading, isError, data}= useStarships()
 
   console.log("data", data)
@@ -35,17 +35,25 @@ export const StarshipFeedScreen = () => {
     return <Text>Something bad happend ... </Text>
   }
 
+  function navigateBackToLoginScreen() {
+    props.navigation.navigate(Routes.LOGIN_SCREEN);
+  }
+
   return (
-    <SafeAreaView style={styles.safeContainer}>
-      <View style={styles.container}>
-        <FlatList
-    
-          data={data.results}
-          renderItem={renderItem}
-          keyExtractor={item => item.name}
-        />
-      </View>
-    </SafeAreaView>
+    <>
+      <Appbar.Header style={styles.navigation}>
+        <Appbar.BackAction onPress={navigateBackToLoginScreen} />
+      </Appbar.Header>
+      <SafeAreaView style={styles.safeContainer}>
+        <View style={styles.container}>
+          <FlatList
+            data={data.results}
+            renderItem={renderItem}
+            keyExtractor={item => item.name}
+          />
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
 
@@ -58,6 +66,11 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
+  },
+  
+  navigation: {
+    backgroundColor: "#F2DD65",
+    color: "white"
   },
   
   card: {
@@ -74,9 +87,10 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontStyle: 'italic',
-    fontSize: 25,
+    fontSize: 30,
     color:"black",
     marginBottom: 23,
   },
+ 
 
 });

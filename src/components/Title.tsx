@@ -15,10 +15,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 32,
+    padding: 24,
+    fontSize: 34,
     fontWeight: 'bold',
     color: '#FFC007',
-    marginBottom: '35px'
+    marginTop: 35,
+    marginBottom: 35
   },
 });
 

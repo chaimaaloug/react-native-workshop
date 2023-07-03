@@ -1,6 +1,7 @@
 {
-  "compilerOptions": {},
-  "extends": "eslint-config-react-native-wcandillon/tsconfig.base",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "extends": "expo/tsconfig.base"
 }
-
-

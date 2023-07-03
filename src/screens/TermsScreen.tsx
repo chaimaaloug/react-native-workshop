@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, ScrollView,StyleSheet, Button } from "react-native";
-import { Headline, Title } from "react-native-paper";
+import { View, Text, ScrollView,StyleSheet } from "react-native";
+import { Appbar, Title } from "react-native-paper";
 import { Routes } from "../navigation/Routes";
 import MainTitle from "../components/Title";
 
@@ -11,6 +11,10 @@ export const TermsScreen = (props) => {
   }
 
   return (
+    <>
+    <Appbar.Header style={styles.navigation}>
+      <Appbar.BackAction onPress={navigateBackToLoginScreen} />
+    </Appbar.Header>
     <ScrollView style={styles.back}>
       <View>
         <MainTitle title= "Terms and Conditions"/>
@@ -99,6 +103,7 @@ export const TermsScreen = (props) => {
           
       </View>
     </ScrollView>
+    </>
   );
 };
 
@@ -115,11 +120,16 @@ const styles = StyleSheet.create({
     padding: 52
   },
 
+  navigation: {
+    backgroundColor: "#FFC007",
+    color: "white"
+  },
+
   title: {
     color: "#FFC007",
     fontWeight:'bold',
     fontSize: 23,
-    marginTop:38,
+    marginTop:58,
     marginBottom:12,
   },
 

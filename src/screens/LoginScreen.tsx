@@ -113,12 +113,12 @@ const styles = StyleSheet.create({
 
   parag: {
     textAlign: "center",
-    fontSize: 14,
+    fontSize: 18,
     padding: 20,
     fontStyle: "italic", 
     fontWeight: "bold",
     color: "white",
-    marginTop: 40
+    marginTop: 20
   },
 
 });

@@ -1,5 +1,8 @@
 # SpaceCraft Mobile Application
 
-# Get Started
+# Getting Started
+
+npm install
+npm start
 
 # Application Demo
