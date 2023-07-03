@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "spacecraft",
+    "name": "SpaceCraft",
     "slug": "spacecraft",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,16 +15,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.inchaii.spacecraft"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.inchaii.spacecraft"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      
+    },
+    "owner": "inchaii"
   }
 }
