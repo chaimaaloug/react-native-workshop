@@ -1,14 +1,14 @@
 # SpaceCraft Mobile Application
 
-# Getting Started
+## Getting Started
 
 ```
 npm install
 npm start
 ```
 
-# Application Demo
+## Application Demo
 
 
-https://github.com/chaimaaloug/react-native-workshop/assets/49941834/46f494fe-a291-40b9-96fa-5e236a6de7d4
+https://github.com/chaimaaloug/react-native-workshop/assets/49941834/dd14cbf1-7637-47c8-939d-a2349b704f31
 
