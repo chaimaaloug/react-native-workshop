@@ -6,11 +6,9 @@ export const Offline = () => {
 
   return (
     <View style={styles.container}>
-      {!IsConnected &&
-        <Text style={styles.message}>
-          Offline, reconnection in progress...
-        </Text>
-      }
+      {!IsConnected && (
+        <Text style={styles.message}>Offline, reconnection in progress...</Text>
+      )}
     </View>
   );
 };

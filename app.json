@@ -28,9 +28,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      
-    },
-    "owner": "inchaii"
+    // "extra": {
+
+    // },
+    // "owner": "inchaii"
   }
 }

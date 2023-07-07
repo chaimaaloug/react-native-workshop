@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
+
 import { Offline } from "../components/Offline";
 
 // Import <Offline /> component

@@ -8,10 +8,14 @@ export default {
 
 export const Default = () => (
   <View style={{ padding: 16, justifyContent: "space-between", flex: 1 }}>
-    <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
-        Validate
+    <Button
+      icon="camera"
+      mode="contained"
+      onPress={() => console.log("Pressed")}
+    >
+      Validate
     </Button>
-    </View>
+  </View>
 );
 
 Default.story = {
